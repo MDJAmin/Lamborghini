@@ -1,0 +1,1239 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+:root {
+  --white: #fff;
+  --light: #f8f8f7;
+  --dark: #343a40;
+  --black: #181818;
+  --padding: 0 30px;
+  --font-size-title: 6.6em;
+  --font-size-dis: 2.2em;
+  --font-family-sans-serif: "Roboto", "Helvetica Neue", Arial;
+  --font-family-monospace: "SFMono-Regular", "Menlo, Monaco", "Consolas",
+    "Liberation Mono", "Courier New", monospace;
+}
+/* start nav bar */
+/* nav style */
+body {
+  min-height: 100vh;
+}
+header nav {
+  height: 94px;
+  background-color: var(--black);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding);
+  box-shadow: 0px 0px 3px 0px black;
+  z-index: 1000 !important;
+}
+/* main-bar and logo */
+nav #main-bar {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+nav #main-bar > li > a {
+  color: var(--light);
+  font-family: var(--font-family-sans-serif);
+  position: relative;
+}
+nav #secondary-bar > li > a {
+  position: relative;
+}
+nav #main-bar > li > a::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  width: 0%;
+  height: 1px;
+  transition: all 0.3s;
+  background-color: var(--light);
+}
+nav #main-bar > li > a:hover::before {
+  width: 100%;
+}
+nav #secondary-bar > li > a::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  width: 0%;
+  height: 1px;
+  transition: all 0.3s;
+  background-color: var(--light);
+}
+nav #secondary-bar > li > a:hover::before {
+  width: 100%;
+}
+nav #logo {
+  height: 65%;
+  padding: var(--padding);
+}
+/* start secondary-bar */
+nav #secondary-bar {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  margin-left: 27%;
+  margin-right: 20px;
+}
+nav #secondary-bar > li > a {
+  color: var(--light);
+  font-family: var(--font-family-sans-serif);
+}
+nav > div#nav-icons {
+  display: flex;
+}
+nav > div#nav-icons > a > i {
+  color: var(--light);
+  font-size: 26px;
+  padding: 0 15px;
+  opacity: 0.8;
+  transition: all 0.5s;
+}
+nav > div#nav-icons > a > i:hover {
+  opacity: 1;
+}
+/* end secondary-bar */
+/* nav mega menus */
+#MODELS-mega-menu {
+  position: fixed;
+  height: 0;
+  top: 73.3px;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  background-color: var(--black);
+  transition: all 0.5s;
+  overflow: hidden;
+  z-index: 1000;
+}
+nav ul li:hover #MODELS-mega-menu {
+  height: 325px;
+  opacity: 1;
+}
+#MODELS-mega-menu p {
+  color: #fff;
+  padding-top: 25px;
+  padding-left: 12%;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: var(--font-family-sans-serif);
+}
+#MODELS-mega-menu p:hover {
+  opacity: 1;
+}
+#MODELS-mega-menu li#REVUELTO-drop-menus ul {
+  position: absolute;
+  left: 22%;
+  top: 0;
+}
+#MODELS-mega-menu li#REVUELTO-drop-menus ul li {
+  color: #fff;
+  font-family: var(--font-family-sans-serif);
+  padding-top: 30px;
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.3s !important;
+}
+#MODELS-mega-menu li#REVUELTO-drop-menus:hover ul li {
+  display: flex;
+  opacity: 1;
+}
+#OWNERSHIP-mega-menu {
+  position: fixed;
+  height: 0;
+  top: 73.3px;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  background-color: var(--black);
+  transition: all 0.5s;
+  z-index: 1000;
+  overflow: hidden;
+}
+nav ul li:hover #OWNERSHIP-mega-menu {
+  height: 325px;
+  opacity: 1;
+  background-color: var(--black);
+}
+#OWNERSHIP-mega-menu p {
+  color: #fff;
+  padding-top: 25px;
+  padding-left: 23%;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: var(--font-family-sans-serif);
+}
+#OWNERSHIP-mega-menu p:hover {
+  opacity: 1;
+}
+#MOTORSPORT-mega-menu {
+  position: fixed;
+  height: 0;
+  top: 73.3px;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  background-color: var(--black);
+  transition: all 0.5s;
+  z-index: 1000;
+  overflow: hidden;
+}
+nav ul li:hover #MOTORSPORT-mega-menu {
+  height: 420px;
+  background-color: var(--black);
+  opacity: 1;
+}
+#MOTORSPORT-mega-menu p {
+  color: #fff;
+  padding-top: 25px;
+  padding-left: 31%;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: var(--font-family-sans-serif);
+}
+#MOTORSPORT-mega-menu p:hover {
+  opacity: 1;
+}
+#MOTORSPORT-mega-menu li#MOTORSPORT-drop-menus ul {
+  position: absolute;
+  left: 45%;
+  top: -2.5%;
+}
+#MOTORSPORT-mega-menu li#MOTORSPORT-drop-menus ul li {
+  color: #fff;
+  font-family: var(--font-family-sans-serif);
+  padding-top: 30px;
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.3s !important;
+}
+#MOTORSPORT-mega-menu li#MOTORSPORT-drop-menus:hover ul li {
+  display: flex;
+  opacity: 1;
+}
+/* end border buttons */
+/* end nav bar */
+/* start section - 1 */
+section#section-1 {
+  position: relative;
+}
+section#section-1 div#section-1-img img {
+  width: 100%;
+  margin-top: 33px;
+}
+section#section-1 div#section-1-Description {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  color: #ffffff;
+  bottom: 250px;
+  left: 8%;
+}
+section#section-1 div#section-1-Description p {
+  font-size: var(--font-size-dis);
+  font-family: var(--font-family-sans-serif);
+}
+section#section-1 div#section-1-Description h2 {
+  font-size: var(--font-size-title);
+  font-family: var(--font-family-sans-serif);
+}
+section#section-1 div#section-1-Description a#section-1-btn i {
+  font-size: 4em;
+  color: var(--white);
+  align-items: center;
+  border: solid 2px var(--white);
+  border-radius: 22px;
+  transition: all 0.6s;
+}
+section#section-1 div#section-1-Description a#section-1-btn i:hover {
+  color: var(--black);
+  background-color: var(--light);
+  scale: 1.1;
+}
+/* end section - 1 */
+/* start section - 2 */
+section#section-2 {
+  position: relative;
+}
+section#section-2 #back-ground-img {
+  position: relative;
+}
+section#section-2 #back-ground-img img.img-1 {
+  width: 66.2%;
+  position: relative;
+  right: -33.82%;
+  top: -4.5px;
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 10% 100%);
+}
+section#section-2 #back-ground-img img.img-2 {
+  left: -15%;
+  top: -5px;
+  width: 84.7%;
+  position: absolute;
+  clip-path: polygon(48% 0, 100% 0, 100% 100%, 30% 100%);
+  filter: brightness(30%);
+}
+section#section-2 #back-ground-img img.img-3 {
+  width: 84.7%;
+  left: -44%;
+  top: -5px;
+  position: absolute;
+  filter: brightness(30%);
+}
+section#section-2 div#iteams {
+  position: absolute;
+  top: 25%;
+  color: var(--light);
+  font-family: var(--font-family-sans-serif);
+}
+section#section-2 div#iteams div.iteam-1 {
+  position: relative;
+  font-size: var(--font-size-dis);
+  left: 90%;
+  bottom: 100px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+section#section-2 div#iteams div.iteam-1 a {
+  color: var(--light);
+  padding: 0 20px;
+  padding-top: 4px;
+  border: 1px solid white;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+section#section-2 div#iteams div.iteam-1 a:hover {
+  background: rgba(255, 255, 255, 0.884);
+  color: var(--black);
+}
+section#section-2 div#iteams div.iteam-2 {
+  position: absolute;
+  left: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+section#section-2 div#iteams div.iteam-2 h2 {
+  font-size: var(--font-size-title);
+}
+section#section-2 div#iteams div.iteam-2 p {
+  font-size: var(--font-size-dis);
+}
+section#section-2 div#iteams div.iteam-3 {
+  display: flex;
+  position: relative;
+  left: 90%;
+  bottom: -250px;
+  gap: 20px;
+}
+section#section-2 div#iteams div.iteam-3 p {
+  font-size: 1.1em;
+}
+section#section-2 div#iteams div.iteam-3 a {
+  color: var(--light);
+  border: 1px solid white;
+  padding: 12px 12px 10px 12px;
+  border-radius: 25%;
+  transition: all 0.6s;
+}
+section#section-2 div#iteams div.iteam-3 a:hover {
+  background: rgba(255, 255, 255, 0.884);
+  color: var(--black);
+}
+/* end section - 2 */
+/* start section - 3 */
+section#section-3 {
+  position: relative;
+}
+section#section-3 div#back-ground-img img {
+  width: 100%;
+}
+section#section-3 div.iteam-1 {
+  position: absolute;
+  top: 12%;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-sans-serif);
+}
+section#section-3 div.iteam-1 p {
+  font-size: var(--font-size-dis);
+  font-weight: 600;
+}
+section#section-3 div.iteam-1 h3 {
+  font-size: 5em;
+  font-weight: 700;
+}
+section#section-3 div.iteam-2 {
+  position: absolute;
+  bottom: 17%;
+  left: 10%;
+  display: flex;
+  gap: 60px;
+}
+section#section-3 div.iteam-2 a {
+  color: var(--black);
+  font-family: var(--font-family-sans-serif);
+  font-size: 1.1em;
+  opacity: 0.6;
+  position: relative;
+}
+section#section-3 div.iteam-2::after {
+  position: absolute;
+  content: " ";
+  bottom: -15px;
+  width: 150%;
+  height: 2px;
+  background-color: #000;
+  opacity: 0.1;
+}
+section#section-3 a#Urus-iteam::before {
+  position: absolute;
+  content: " ";
+  bottom: -15px;
+  opacity: 0.9;
+  width: 360%;
+  left: -350%;
+  height: 2px;
+  background-color: #000;
+  transition: all 0.2s !important;
+}
+section#section-3 a#Urus-iteam:hover::before {
+  width: 674%;
+  background-color: #000;
+  position: absolute;
+  content: " ";
+  bottom: -15px;
+  height: 2px;
+}
+/* end section - 3 */
+/* start section - 4 */
+section#section-4 {
+  position: relative;
+}
+section#section-4 div#section-4-img img {
+  width: 100%;
+  height: 100%;
+}
+section#section-4 div#section-4-Description {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  color: #ffffff;
+  top: 26%;
+  left: 5%;
+}
+section#section-4 div#section-4-Description h2 {
+  font-size: 5em;
+  font-family: var(--font-family-sans-serif);
+}
+section#section-4 div#section-4-Description p {
+  font-size: var(--font-size-dis);
+  font-family: var(--font-family-sans-serif);
+}
+section#section-4 div#section-4-Description a#section-4-btn i {
+  font-size: 4em;
+  color: var(--white);
+  align-items: center;
+  border: solid 2px var(--white);
+  border-radius: 22px;
+  transition: all 0.6s;
+  margin-top: 2px;
+  margin-left: 10px;
+}
+section#section-4 div#section-4-Description a#section-4-btn i:hover {
+  color: var(--black);
+  background-color: var(--light);
+  scale: 1.1;
+}
+/* end section - 4 */
+/* start section-5 */
+section#section-5 {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  position: relative;
+  margin-top: 70px;
+}
+section#section-5 .img-section-5 {
+  display: flex;
+  justify-content: center;
+}
+section#section-5 img {
+  width: 83%;
+}
+.header-section-5 {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 8%;
+}
+section#section-5 div.header-section-5 p {
+  font-size: 2em;
+  font-weight: 800;
+  font-family: var(--font-family-sans-serif);
+}
+section#section-5 div.header-section-5 h2 {
+  font-size: 7em;
+  font-family: var(--font-family-sans-serif);
+}
+.under-section-5 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8.8%;
+}
+.under-section-5 .date-section-5 {
+  margin-top: 50px;
+  font-size: 1.2em;
+  font-weight: 700;
+  opacity: 0.7;
+  letter-spacing: 1px;
+  font-family: var(--font-family-sans-serif);
+  margin-bottom: 20px;
+}
+.under-section-5 button {
+  cursor: pointer;
+  border: none;
+  letter-spacing: 1.5px;
+  font-family: var(--font-family-sans-serif);
+  padding: 5px;
+  font-size: 0.9em;
+  margin-left: 5px;
+  background-color: #66666610;
+  transition: all 0.5s;
+}
+.under-section-5 button:hover {
+  color: white;
+  background-color: #000000;
+}
+/* end section-5 */
+/* start section-6 */
+/* start iteam - 1 - section-6 */
+#title-section-6 {
+  display: flex;
+  position: relative;
+  margin: 0 8.8%;
+  gap: 21%;
+  margin-top: 50px;
+}
+#title-section-6 .title-section-6-dis {
+  display: flex;
+  flex-direction: column;
+}
+#title-section-6 .title-section-6-dis h3 {
+  font-size: 1.8em;
+  font-family: var(--font-family-sans-serif);
+}
+#title-section-6 .title-section-6-dis p {
+  font-family: var(--font-family-sans-serif);
+  opacity: 0.8;
+  margin-top: 20px;
+}
+#title-section-6 .title-section-6-btn button {
+  padding: 15px 40px;
+  background-color: #ffffff;
+  border: solid 1px rgba(0, 0, 0, 0.219);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+#title-section-6 .title-section-6-btn button:hover {
+  background-color: #000;
+  color: white;
+}
+#iteams-1-section-6 {
+  display: flex;
+  position: relative;
+  margin: 0 8.8%;
+  margin-top: 40px;
+}
+#iteams-1-section-6 img {
+  width: 81%;
+}
+#iteams-1-section-6 p {
+  position: relative;
+  right: 100px;
+  opacity: 0.7;
+  font-family: var(--font-family-sans-serif);
+}
+#iteams-1-section-6 .EVENTS-btn {
+  cursor: pointer;
+  border: none;
+  letter-spacing: 1px;
+  font-family: var(--font-family-sans-serif);
+  padding: 5px;
+  font-size: 0.9em;
+  margin-left: 5px;
+  background-color: #66666610;
+  transition: all 0.5s;
+  position: relative;
+  top: 20%;
+  right: 100px;
+}
+#iteams-1-section-6 .EVENTS-btn:hover {
+  color: white;
+  background-color: #000000;
+}
+#iteams-1-section-6 h3 {
+  font-family: var(--font-family-sans-serif);
+  position: relative;
+  top: 25%;
+  right: 100px;
+  font-size: 2em;
+}
+#iteams-1-section-6 .READ-MORE-btn {
+  padding: 15px 55px;
+  background-color: #ffffff;
+  border: solid 1px rgba(0, 0, 0, 0.219);
+  transition: all 0.5s;
+  position: relative;
+  cursor: pointer;
+  top: 35%;
+  right: 100px;
+}
+#iteams-1-section-6 .READ-MORE-btn:hover {
+  background-color: #000;
+  color: white;
+}
+/* end iteam - 1 - section-6 */
+/* start iteam - 2 - section-6 */
+div#style-iteams-2-section-6 {
+  margin-top: 50px;
+}
+#style-iteams-2-section-6 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0 8.8%;
+}
+#iteams-2-section-6 {
+  display: flex;
+  position: relative;
+}
+#iteams-2-section-6 img {
+  width: 92%;
+}
+#iteams-2-section-6 p {
+  position: relative;
+  opacity: 0.7;
+  font-family: var(--font-family-sans-serif);
+}
+#iteams-2-section-6 h3 {
+  font-family: var(--font-family-sans-serif);
+  position: relative;
+  top: 25%;
+  font-size: 2em;
+}
+#iteams-2-section-6 button {
+  padding: 15px 55px;
+  background-color: #ffffff;
+  border: solid 1px rgba(0, 0, 0, 0.219);
+  cursor: pointer;
+  transition: all 0.5s;
+  position: relative;
+  top: 42%;
+}
+#iteams-2-section-6 button:hover {
+  background-color: #000;
+  color: white;
+}
+/* end iteam - 2 - section-6 */
+/* end section-6 */
+/* start see all btn */
+#SEE-ALL-btn {
+  display: flex;
+  justify-content: center;
+}
+#style-iteams-2-section-6 div#SEE-ALL-btn button {
+  margin: 10%;
+  padding: 18px 77px;
+  background-color: var(--black);
+  color: var(--white);
+  border: solid 2px rgba(0, 0, 0, 0.219);
+  transition: all 0.5s;
+  position: relative;
+  font-size: 1em;
+  right: -20px;
+  cursor: pointer;
+}
+#style-iteams-2-section-6 div#SEE-ALL-btn button:hover {
+  background-color: rgba(255, 255, 255, 0);
+  color: var(--black);
+}
+/* end see all btn */
+/* start footer */
+footer {
+  background-color: var(--black);
+  padding: 0 50px;
+  padding-top: 50px;
+  padding-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: var(--light);
+  font-family: var(--font-family-sans-serif);
+}
+footer div#footer-iteams-medias {
+  display: flex;
+}
+footer div#footer-iteams-medias a i {
+  color: #ffffff;
+}
+footer div#footer-items a {
+  color: var(--white);
+  position: relative;
+}
+footer div#footer-items a::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  width: 0%;
+  height: 0.5px;
+  transition: all 0.3s;
+  background-color: var(--light);
+}
+footer div#footer-items a:hover::before {
+  width: 100%;
+}
+footer div#footer-items-1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-bottom: 25px;
+}
+footer div#footer-items-2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px !important;
+}
+footer div#footer-media {
+  padding-left: 25%;
+}
+footer div#footer-media a {
+  font-size: 1.5em;
+  padding: 0 5px;
+}
+footer div#footer-Description {
+  display: flex;
+  flex-direction: column;
+}
+footer div#footer-Description-1 {
+  display: flex;
+  padding: 40px 0;
+}
+footer div#footer-Description-1 i {
+  font-size: 9px;
+  opacity: 0.8;
+  padding: 0px 5px;
+}
+/* end footer */
+/* start button error */
+div#button-err {
+  min-height: 60px;
+  background-color: #000;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: var(--padding);
+  z-index: 1000;
+}
+div#button-err p {
+  padding-top: 9px;
+  color: var(--light);
+  font-family: var(--font-family-sans-serif);
+}
+/* end button error */
+/* start media queries */
+@media screen and (max-width: 1350px) {
+  nav > div#nav-icons > a > i {
+    padding: 0 10px;
+  }
+  nav #main-bar {
+    font-size: 0.9em;
+  }
+  nav #secondary-bar {
+    font-size: 0.9em;
+  }
+  #iteams-1-section-6 h3 {
+    font-size: 1.7em;
+  }
+  #iteams-2-section-6 h3 {
+    font-size: 1.7em;
+  }
+  #title-section-6 .title-section-6-dis h3 {
+    font-size: 1.55em;
+  }
+}
+@media screen and (max-width: 1220px) {
+  nav > div#nav-icons > a > i {
+    padding: 0 5px;
+  }
+  nav #main-bar {
+    font-size: 0.7em;
+    margin-top: 7px;
+  }
+  nav #secondary-bar {
+    font-size: 0.7em;
+    margin-right: 5px;
+  }
+  section#section-1 div#section-1-Description {
+    bottom: 150px;
+  }
+  section#section-2 div#iteams div.iteam-2 {
+    top: 30px;
+  }
+  section#section-2 div#iteams div.iteam-3 {
+    bottom: -130px;
+  }
+  #iteams-1-section-6 h3 {
+    font-size: 1em;
+  }
+  #iteams-2-section-6 h3 {
+    font-size: 1.19em;
+  }
+  div#style-iteams-2-section-6 {
+    margin-top: 100px;
+  }
+  #iteams-1-section-6 .EVENTS-btn {
+    top: 15%;
+  }
+  section#section-5 div.header-section-5 h2 {
+    font-size: 5em;
+  }
+  #iteams-1-section-6 .READ-MORE-btn {
+    font-size: 0.6em;
+  }
+  #iteams-2-section-6 button {
+    font-size: 0.6em;
+  }
+  #title-section-6 .title-section-6-dis h3 {
+    font-size: 1.3em;
+  }
+  #title-section-6 .title-section-6-dis p {
+    font-size: 0.8em;
+  }
+  #nav-icons a {
+    padding: 0 2px;
+  }
+}
+@media screen and (max-width: 1040px) {
+  header nav {
+    height: 75px;
+  }
+  nav #main-bar,
+  nav #secondary-bar {
+    display: none;
+  }
+  #nav-icons a {
+    padding: 0 5px;
+  }
+  section#section-1 div#section-1-Description {
+    bottom: 150px;
+  }
+  section#section-1 div#section-1-Description p {
+    font-size: 1.5em;
+  }
+  section#section-1 div#section-1-Description h2 {
+    font-size: 4em;
+  }
+  section#section-1 div#section-1-Description a {
+    font-size: 0.6em;
+  }
+  section#section-2 {
+    display: none;
+  }
+  section#section-3 div.iteam-1 p {
+    font-size: 1.7em;
+  }
+  section#section-3 div.iteam-1 h3 {
+    font-size: 4em;
+  }
+  section#section-4 div#section-4-Description h2 {
+    font-size: 3em;
+  }
+  section#section-4 div#section-4-Description p {
+    font-size: 1.5em;
+  }
+  section#section-4 div#section-4-Description a#section-4-btn i {
+    font-size: 3em;
+    border-radius: 50%;
+    margin-left: 0px;
+  }
+  section#section-5 div.header-section-5 h2 {
+    font-size: 3em;
+  }
+  section#section-5 div.header-section-5 p {
+    font-size: 1.5em;
+  }
+  #iteams-1-section-6 .READ-MORE-btn {
+    display: none;
+  }
+  #iteams-2-section-6 button {
+    display: none;
+  }
+  #title-section-6 .title-section-6-btn button {
+    display: none;
+  }
+  #title-section-6 {
+    margin-top: 15px;
+  }
+  #iteams-1-section-6 {
+    flex-direction: column;
+  }
+  #iteams-1-section-6 img {
+    width: 100%;
+  }
+  #iteams-1-section-6 div#iteam-1-1-section-6 {
+    margin: 20px 0px;
+    margin-left: 100px;
+  }
+  #iteams-1-section-6 div#iteam-1-1-section-6 .EVENTS-btn {
+    margin: 15px 0;
+  }
+  #iteams-1-section-6 div#iteam-1-1-section-6 h3 {
+    font-size: 1.5em;
+  }
+  #iteams-2-section-6 {
+    flex-direction: column;
+  }
+  #iteams-2-section-6 img {
+    width: 100%;
+  }
+  div#style-iteams-2-section-6 {
+    margin-top: 0px;
+  }
+  #iteams-2-section-6 div#iteam-2-1-section-6 {
+    margin-top: 20px;
+  }
+  #iteams-2-section-6 div#iteam-2-1-section-6 p {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 840px) {
+  section#section-1 div#section-1-Description {
+    bottom: 150px;
+  }
+  section#section-1 div#section-1-Description p {
+    font-size: 1em;
+  }
+  section#section-1 div#section-1-Description h2 {
+    font-size: 3.3em;
+  }
+  section#section-1 div#section-1-Description a#section-1-btn i {
+    font-size: 2.9em;
+  }
+  section#section-3 div.iteam-1 p {
+    font-size: 1.3em;
+  }
+  section#section-3 div.iteam-1 h3 {
+    font-size: 3em;
+  }
+  section#section-3 div.iteam-2 {
+    gap: 40px;
+  }
+  section#section-3 div.iteam-2 a {
+    font-size: 0.9em;
+  }
+  section#section-3 div.iteam-2::after {
+    position: absolute;
+    content: " ";
+    bottom: -15px;
+    width: 130%;
+    height: 2px;
+    background-color: #000;
+    opacity: 0.1;
+  }
+  section#section-3 a#Urus-iteam::before {
+    position: absolute;
+    content: " ";
+    bottom: -15px;
+    opacity: 0.9;
+    width: 310%;
+    left: -320%;
+    height: 2px;
+    background-color: #000000de;
+    transition: all 0.2s !important;
+  }
+  section#section-3 a#Urus-iteam:hover::before {
+    width: 546%;
+    background-color: #000;
+    position: absolute;
+    content: " ";
+    bottom: -15px;
+    height: 2px;
+  }
+  section#section-4 div#section-4-Description p {
+    font-size: 1.3em;
+  }
+  section#section-4 div#section-4-Description h2 {
+    font-size: 2.4em;
+  }
+  section#section-4 div#section-4-Description a#section-4-btn i {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 660px) {
+  section#section-1 div#section-1-Description {
+    bottom: 90px;
+  }
+  section#section-3 div.iteam-1 p {
+    font-size: 1em;
+  }
+  section#section-3 div.iteam-1 h3 {
+    font-size: 2.5em;
+  }
+  section#section-5 div.header-section-5 h2 {
+    font-size: 2.3em;
+  }
+  div#title-section-6 {
+    font-size: 0.7em;
+  }
+  #footer-Description-2 {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 560px) {
+  section#section-1 div#section-1-Description {
+    bottom: 70px;
+  }
+  section#section-1 div#section-1-Description p {
+    font-size: 0.7em;
+  }
+  section#section-1 div#section-1-Description h2 {
+    font-size: 2.5em;
+  }
+  section#section-1 div#section-1-Description a#section-1-btn i {
+    font-size: 2.5em;
+  }
+  section#section-3 div.iteam-1 p {
+    font-size: 1em;
+  }
+  section#section-3 div.iteam-1 h3 {
+    font-size: 2em;
+  }
+  section#section-4 div#section-4-Description p {
+    font-size: 1em;
+  }
+  section#section-4 div#section-4-Description h2 {
+    font-size: 1.7em;
+  }
+  section#section-4 div#section-4-Description a#section-4-btn i {
+    font-size: 1.5em;
+  }
+  section#section-5 {
+    margin-top: 10px;
+  }
+  .under-section-5 .date-section-5 {
+    margin-top: 10px;
+    font-size: 0.8em;
+  }
+  .under-section-5 button {
+    letter-spacing: 1;
+    font-size: 0.8em;
+  }
+  #title-section-6 .title-section-6-dis h3 {
+    font-size: 1.1em;
+  }
+  #iteams-1-section-6 div#iteam-1-1-section-6 h3 {
+    font-size: 1em;
+  }
+  #title-section-6 .title-section-6-dis p {
+    margin-top: 10px;
+  }
+  #iteams-1-section-6 p {
+    font-size: 0.8em;
+  }
+  #iteams-1-section-6 {
+    margin-top: 10px;
+  }
+  #iteams-1-section-6 div#iteam-1-1-section-6 h3#iteam-1-h3 {
+    font-size: 0.8em;
+  }
+  #iteams-2-section-6 p {
+    font-size: 0.8em;
+  }
+  #iteams-2-section-6 h3 {
+    font-size: 1em;
+  }
+  #style-iteams-2-section-6 div#SEE-ALL-btn button {
+    padding: 15px 40px;
+    left: 0;
+  }
+  #footer-Description-2 {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 440px) {
+  section#section-1 div#section-1-Description {
+    bottom: 70px;
+  }
+  section#section-1 div#section-1-Description p {
+    font-size: 0.5em;
+  }
+  section#section-1 div#section-1-Description h2 {
+    font-size: 1.8em;
+  }
+  section#section-1 div#section-1-Description a#section-1-btn i {
+    font-size: 1.8em;
+  }
+  section#section-3 div.iteam-1 p {
+    font-size: 0.7em;
+  }
+  section#section-3 div.iteam-1 h3 {
+    font-size: 1.6em;
+  }
+  section#section-3 div.iteam-2 {
+    gap: 25px;
+    left: 8%;
+  }
+  section#section-3 div.iteam-2 a {
+    font-size: 0.7em;
+  }
+  section#section-3 div.iteam-2::after {
+    position: absolute;
+    content: " ";
+    bottom: -10px;
+    width: 130%;
+    height: 2px;
+    background-color: #000000;
+    opacity: 0.1;
+  }
+  section#section-3 a#Urus-iteam::before {
+    position: absolute;
+    content: " ";
+    bottom: -10px;
+    opacity: 0.9;
+    width: 310%;
+    left: -295%;
+    height: 2px;
+    background-color: #000000;
+    transition: all 0.2s !important;
+  }
+  section#section-3 a#Urus-iteam:hover::before {
+    width: 540%;
+    background-color: #000;
+    position: absolute;
+    content: " ";
+    bottom: -15px;
+    height: 2px;
+  }
+  section#section-4 div#section-4-Description p {
+    font-size: 0.7em;
+  }
+  section#section-4 div#section-4-Description h2 {
+    font-size: 1.3em;
+  }
+  section#section-4 div#section-4-Description a#section-4-btn i {
+    font-size: 1em;
+  }
+  section#section-5 div.header-section-5 h2 {
+    font-size: 1.8em;
+  }
+  #footer-Description-2 {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 370px) {
+  header nav {
+    height: 60px;
+  }
+  nav #logo {
+    padding: 0;
+  }
+  nav > div#nav-icons > a > i {
+    margin: 0;
+    padding-right: 0;
+  }
+  section#section-1 div#section-1-Description {
+    bottom: 50px;
+  }
+  section#section-1 div#section-1-Description p {
+    font-size: 0.5em;
+  }
+  section#section-1 div#section-1-Description h2 {
+    font-size: 0.8em;
+  }
+  section#section-1 div#section-1-Description a#section-1-btn i {
+    font-size: 1.1em;
+    margin-top: 5px;
+  }
+  .under-section-5 button {
+    font-size: 0.6em;
+    width: 70%;
+  }
+  section#section-3 div.iteam-1 p {
+    font-size: 0.6em;
+  }
+  section#section-3 div.iteam-1 h3 {
+    font-size: 1.3em;
+  }
+  section#section-4 div#section-4-Description p {
+    font-size: 0.6em;
+  }
+  section#section-4 div#section-4-Description h2 {
+    font-size: 1.1em;
+  }
+  section#section-4 div#section-4-Description a#section-4-btn i {
+    font-size: 0.8em;
+  }
+  button.EVENTS-btn {
+    font-size: 0.6em !important;
+  }
+  #footer-Description-2 {
+    margin-bottom: 85px;
+  }
+  #style-iteams-2-section-6 div#SEE-ALL-btn button {
+    padding: 5px 20px;
+    font-size: 0.7em;
+    left: 0;
+  }
+}
+@media screen and (max-width: 300px) {
+  section#section-1 div#section-1-Description {
+    bottom: 30px;
+  }
+  section#section-3 div.iteam-1 p {
+    font-size: 0.5em;
+  }
+  section#section-3 div.iteam-1 h3 {
+    font-size: 1.1em;
+  }
+  #section-5 .header-section-5 p {
+    font-size: 0.7em !important;
+  }
+  #section-5 .header-section-5 h2 {
+    font-size: 1.2em !important;
+  }
+  #iteam-1-1-section-6 #iteam-1-h3 {
+    font-size: 0.7em !important;
+  }
+  #iteam-2-1-section-6 h3 {
+    font-size: 0.7em !important;
+  }
+  #footer-Description-2 {
+    margin-bottom: 135px;
+  }
+}
+/* end media queries */
